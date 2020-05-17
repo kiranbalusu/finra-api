@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.finra.common.FinraLogger;
 import com.finra.mapper.EmployeeDetailMapper;
 import com.finra.model.EmployeeDetail;
 import com.finra.repository.EmployeeDetailRepository;
@@ -18,7 +19,7 @@ import com.finra.vo.EmployeeDetailVO;
 
 @Service
 public class EmployeeDetailServiceImpl implements EmployeeDetailService{
-	
+	FinraLogger logger=new FinraLogger(EmployeeDetailServiceImpl.class);
 	@Autowired
 	EmployeeDetailRepository empDetailRepo;
 	

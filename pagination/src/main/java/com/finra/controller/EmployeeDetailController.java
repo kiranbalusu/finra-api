@@ -11,13 +11,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.finra.common.FinraLogger;
 import com.finra.service.EmployeeDetailService;
 import com.finra.vo.EmployeeDataVO;
 import com.finra.vo.EmployeeDetailVO;
 
+
 @RestController
 @RequestMapping(path = "/empdetails")
 public class EmployeeDetailController {
+	FinraLogger logger=new FinraLogger(EmployeeDetailController.class);
 	
 	@Autowired
 	EmployeeDetailService empDetailService;
